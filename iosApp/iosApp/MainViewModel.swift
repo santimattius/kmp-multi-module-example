@@ -9,6 +9,7 @@
 import Foundation
 import home
 import checkout
+import data
 
 class MainViewModel {
     
