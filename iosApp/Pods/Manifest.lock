@@ -1,26 +1,16 @@
 PODS:
-  - checkout (1.0)
-  - data (1.0)
-  - home (1.0)
+  - shared (1.0)
 
 DEPENDENCIES:
-  - checkout (from `../checkout`)
-  - data (from `../data`)
-  - home (from `../home`)
+  - shared (from `../shared`)
 
 EXTERNAL SOURCES:
-  checkout:
-    :path: "../checkout"
-  data:
-    :path: "../data"
-  home:
-    :path: "../home"
+  shared:
+    :path: "../shared"
 
 SPEC CHECKSUMS:
-  checkout: 9ccb005cedbb317149463b2b076074f0a9a3e177
-  data: 18f3d231bb0ea95a984a72d512d8d1928c68d51e
-  home: 3b9ad13f2aef2554db315112da2a685852616fdd
+  shared: c133c49697085ba65e4031b78e671fc97617a40d
 
-PODFILE CHECKSUM: 3ea50f6a520561e098c6df11430141162af57fa9
+PODFILE CHECKSUM: a65e77dc4d4e63557389333f661e49ad00fa32d6
 
 COCOAPODS: 1.15.2

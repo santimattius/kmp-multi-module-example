@@ -1,12 +1,13 @@
 import SwiftUI
-import home
+//import umbrella
+
 
 struct ContentView: View {
-    let greet1 = FirstGreeting().greet()
+    //let greet1 = FirstGreeting().greet()
 
 
 	var body: some View {
-		Text(greet1)
+		Text("greet1")
 	}
 }
 

@@ -7,15 +7,13 @@
 //
 
 import Foundation
-import home
-import checkout
-import data
+import shared
 
 class MainViewModel {
     
-    let processCheckout = ProcessCheckout(repository: DataBookRepository())
+    let processCheckout = ProcessCheckout(repository: BookRepository())
     
-    let getAll = GetAll(repository: DataBookRepository())
+    let getAll = GetAll(repository: BookRepository())
     
     
     func checkout() {
