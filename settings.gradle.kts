@@ -16,6 +16,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "kmp-multi-module"
 include(":androidApp")
-include(":core")
-include(":first")
-include(":second")
+include(":home")
+include(":checkout")
+include(":data")

@@ -1,7 +1,5 @@
 import SwiftUI
-import first
-
-
+import home
 
 struct ContentView: View {
     let greet1 = FirstGreeting().greet()
