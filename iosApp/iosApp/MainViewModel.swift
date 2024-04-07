@@ -11,15 +11,22 @@ import shared
 
 class MainViewModel {
     
-    let processCheckout = ProcessCheckout(repository: BookRepository())
+    private let bookRepository: BookRepository
+    private let processCheckout: ProcessCheckout
+    private let getAll: GetAll
     
-    let getAll = GetAll(repository: BookRepository())
-    
+    init() {
+        self.bookRepository = BookRepository()
+        self.processCheckout = ProcessCheckout(repository: bookRepository)
+        self.getAll = GetAll(repository: bookRepository)
+    }
     
     func checkout() {
         let books = getAll.invoke()
-        let currentBook = books.first
+        guard let currentBook = books.first else {
+            return
+        }
         
-        //processCheckout.invoke(book: currentBook)
+        processCheckout.invoke(book: currentBook)
     }
 }
