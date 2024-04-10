@@ -1,4 +1,4 @@
-# KMP Multi-module Example
+# KMP Multi Module Example
 
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
