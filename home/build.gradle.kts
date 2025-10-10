@@ -1,3 +1,6 @@
+import org.jetbrains.kotlin.config.JvmTarget
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.kotlinCocoapods)
@@ -5,13 +8,9 @@ plugins {
 }
 
 kotlin {
-    androidTarget {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "1.8"
-            }
-        }
-    }
+    applyDefaultHierarchyTemplate()
+
+    androidTarget()
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -25,8 +24,6 @@ kotlin {
         framework {
             baseName = "home"
             isStatic = true
-//            export(project(":core"))
-            transitiveExport = true
         }
 
     }
@@ -43,7 +40,7 @@ kotlin {
 
 android {
     namespace = "io.github.santimattius.kmp.module"
-    compileSdk = 34
+    compileSdk = 36
     defaultConfig {
         minSdk = 24
     }

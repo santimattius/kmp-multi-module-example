@@ -5,13 +5,8 @@ plugins {
 }
 
 kotlin {
-    androidTarget {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "1.8"
-            }
-        }
-    }
+    applyDefaultHierarchyTemplate()
+    androidTarget()
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -25,8 +20,6 @@ kotlin {
         framework {
             baseName = "checkout"
             isStatic = true
-//            export(project(":core"))
-            transitiveExport = true
         }
     }
 
@@ -43,12 +36,12 @@ kotlin {
 
 android {
     namespace = "io.github.santimattius.kmp.module"
-    compileSdk = 34
+    compileSdk = 36
     defaultConfig {
         minSdk = 24
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
